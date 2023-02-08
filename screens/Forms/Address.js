@@ -3,7 +3,15 @@ import { StyleSheet, View, Text, Image, TouchableOpacity, TextInput, Alert } fro
 import {COLORS, SIZES, FONTS} from '../../constants';
 import {ScrollView} from 'react-native-gesture-handler';
 
+// UXCam import
+import RNUxcam from 'react-native-ux-cam';
+
 const Address = ({navigation}) => {
+
+  useEffect(() => {
+    RNUxcam.tagScreenName('Address');
+    console.info('testing app Logs JS');
+  });
   const [formState, setFormState] = useState([])
   const onAlertTriggered = (message) => {
     return (
